@@ -26,6 +26,7 @@ export class ErrorInterceptor implements HttpInterceptor {
                 for(const key in error.error.errors){
                     if(error.error.errors[key]){
                         modelStateErrors.push(error.error.errors[key])
+                        this.toastr.error(error.error.errors[key], error.status.toString())
                     }
                 }
                 

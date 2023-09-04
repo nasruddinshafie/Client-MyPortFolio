@@ -6,14 +6,22 @@
         class="form-control"
         name="username"
         [(ngModel)] = "model.username"
-        placeholder="Username">
+        placeholder="Username"
+        [ngClass]="{
+            'required-class': !isUserNameRequred,
+            
+          }">
     </div>
     <div class="mb-3">
         <input type="password"
         class="form-control"
         name="password"
         [(ngModel)] = "model.password"
-        placeholder="Password">
+        placeholder="Password"
+        [ngClass]="{
+            'required-class': !isPasswordRequired,
+            
+          }">
     </div>
 
     <div class="text-center">

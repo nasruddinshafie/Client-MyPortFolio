@@ -10,7 +10,8 @@ export class RegisterComponent implements OnInit {
 
   @Output() cancelRegsiter = new EventEmitter();
   model: any = {}
-
+  isUserNameRequred: boolean = true;
+  isPasswordRequired: boolean = true;
   constructor(private accountService: AccountService, private toastr:ToastrService){
 
   }
@@ -25,6 +26,14 @@ export class RegisterComponent implements OnInit {
       this.Cancel()
     },
     error: error => {
+     for(var error of error){
+      if(error.toString().includes("username")){
+       this.isUserNameRequred = false;
+      }
+      if(error.toString().includes("password")){
+       this.isPasswordRequired = false;
+      }
+     }
     }
    })
   }

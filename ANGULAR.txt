@@ -1,0 +1,8 @@
+ANGULAR
+
+===boostrap====
+
+using ng boostrap => https://valor-software.com/ngx-bootstrap/#/documentation
+- check compatibality
+- how to add ?
+- 

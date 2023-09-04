@@ -1,0 +1,9 @@
+.required-class {
+    /* Define styles for the input when it is required */
+    border: 2px solid red;
+  }
+  
+  .optional-class {
+    /* Define styles for the input when it is optional */
+    border: 2px solid green;
+  }
